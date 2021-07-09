@@ -100,7 +100,8 @@ class Loader(EasyCopy):
             from web3 import Web3
             infura_url = 'https://mainnet.infura.io/v3/dbfcaa58ec684fe9b47e779022d2c4b4'
             bsc = "https://bsc-dataseed.binance.org/"
-            w3 = Web3(Web3.HTTPProvider(bsc))
+            kcc = "http://localhost:8845"
+            w3 = Web3(Web3.HTTPProvider(kcc))
             # code = w3.eth.get_code(address).hex()[2:]
 
             code = w3.eth.getCode(Web3.toChecksumAddress(address)).hex()[2:]
